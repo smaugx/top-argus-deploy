@@ -14,7 +14,8 @@ git clone https://github.com/smaugx/top-argus-deploy.git
 + create tar.gz and using ansible copy to your hosts
 
 ```
-ansible -i host  all -m copy "src=./top-argus-deploy.tar.gz /root/"
+tar zcvf top-argus-deploy.tar.gz top-argus-deploy
+ansible -i host  all -m copy -a "src=./top-argus-deploy.tar.gz dest=/root/"
 ```
 
 + Install the dependencies And Be Ready for agent
