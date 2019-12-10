@@ -53,9 +53,5 @@ source  vvlinux/bin/activate
 pip install -r requirements.txt
 
 echo ""
-echo "###################everything ready for agent, will start agent####################"
-echo ""
-
-cd agent
-nohup python argus_agent.py -a 127.0.0.1:9090 -f ./xtop.log > /dev/null & 2>&1
-echo "done start"
+echo "###################everything ready for agent####################"
+echo "done deploy"
