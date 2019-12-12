@@ -15,29 +15,29 @@ git clone https://github.com/smaugx/top-argus-deploy.git
 
 ```
 tar zcvf top-argus-deploy.tar.gz top-argus-deploy
-ansible -i host  all -m copy -a "src=./top-argus-deploy.tar.gz dest=/root/"
+ansible -i host  all -m copy -a "src=./top-argus-deploy.tar.gz dest=/home/topuser/"
 ```
 
 + Install the dependencies And Be Ready for agent
 
 ```
-ansible -i host  all -m shell -a "cd /root && tar zxvf top-argus-deploy.tar.gz && cd top-argus-deploy && sh install.sh"
+ansible -i host  all -m shell -a "cd /home/topuser && tar zxvf top-argus-deploy.tar.gz && cd top-argus-deploy && sh install.sh"
 ```
 
 + start the agent
 
 ```
-ansible -i host  all -m shell -a "cd /root/top-argus-deploy && sh start.sh 127.0.0.1:9090 ./xtop.log"    
+ansible -i host  all -m shell -a "cd /home/topuser/top-argus-deploy && sh start.sh 127.0.0.1:9090 ./xtop.log"    
 ```
 
 + stop the agent
 
 ```
-ansible -i host  all -m shell -a "cd /root/top-argus-deploy && sh stop.sh"    
+ansible -i host  all -m shell -a "cd /home/topuser/top-argus-deploy && sh stop.sh"    
 ```
 
 + restart the agent
 
 ```
-ansible -i host  all -m shell -a "cd /root/top-argus-deploy && sh restart.sh 127.0.0.1:9090 ./xtop.log"    
+ansible -i host  all -m shell -a "cd /home/topuser/top-argus-deploy && sh restart.sh 127.0.0.1:9090 ./xtop.log"    
 ```

@@ -1,9 +1,9 @@
 pwd
 
-rm -rf /root/smaug
+rm -rf /home/topuser/smaug
 
-mkdir /root/smaug -p
-cd /root/smaug
+mkdir /home/topuser/smaug -p
+cd /home/topuser/smaug
 
 which python3
 if [ $? -eq 1 ]
@@ -20,7 +20,7 @@ if [ $? -eq 1 ]
 then
     echo "no pip found, will try to install pip"
     # install pip
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python3 get-pip.py
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python3 get-pip.py
 else
     echo 'check pip ################################## Yes'
 fi
@@ -30,7 +30,7 @@ if [ $? -eq 1 ]
 then
     echo "no virtualenv found, will try to install virtualenv"
     # 安装 virtualenv
-    pip3 install virtualenv
+    sudo pip3 install virtualenv
 else
     echo 'check virtualenv ################################## Yes'
 fi
@@ -39,7 +39,7 @@ which git
 if [ $? -eq 1 ]
 then
     echo "no git found, will try to install git"
-    yum install -y git
+    sudo yum install -y git
 else
     echo 'check git ################################## Yes'
 fi
