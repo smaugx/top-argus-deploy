@@ -30,7 +30,8 @@ if [ $? -eq 1 ]
 then
     echo "no virtualenv found, will try to install virtualenv"
     # 安装 virtualenv
-    sudo pip3 install virtualenv
+    ret_pip3=`which pip3`
+    sudo $ret_pip3  install virtualenv
 else
     echo 'check virtualenv ################################## Yes'
 fi
