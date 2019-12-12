@@ -1,3 +1,4 @@
+
 # top-argus-deploy
 deploy scripts and tools for [top-argus](https://github.com/smaugx/top-argus)
 
@@ -5,6 +6,8 @@ deploy scripts and tools for [top-argus](https://github.com/smaugx/top-argus)
 
 
 # How TO Deploy?
+**attention: using non-root recommended**
+
 + clone repo
 
 ```
