@@ -45,6 +45,7 @@ else
     echo 'check git ################################## Yes'
 fi
 
+rm -rf top-argus-agent
 git clone https://github.com/smaugx/top-argus-agent
 echo 'clone top-argus-agent ################################## Ok'
 
