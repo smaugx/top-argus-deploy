@@ -1,4 +1,5 @@
 pwd
+sh ./stop.sh
 
 rm -rf /home/topuser/smaug
 
@@ -50,7 +51,9 @@ git clone https://github.com/smaugx/top-argus-agent
 echo 'clone top-argus-agent ################################## Ok'
 
 cd top-argus-agent
-virtualenv  -p python3 vvlinux
+ret_vir=`which virtualenv`
+ret_py3=`which python3`
+$ret_vir -p $ret_py3 vvlinux
 source  vvlinux/bin/activate
 pip install -r requirements.txt
 
