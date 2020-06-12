@@ -3,7 +3,7 @@
 pwd
 sh ./stop.sh
 
-rm -rf /home/topuser/smaug
+#rm -rf /home/topuser/smaug
 
 mkdir /home/topuser/smaug -p
 cd /home/topuser/smaug
@@ -52,7 +52,7 @@ ls top-argus-agent
 if [ $? -eq 0 ]
 then
     echo "found top-argus-agent dir"
-    if [ $# -ne 1]
+    if [ $# -ne 1 ]
     then
         echo "using non-force mode, will exit"
         exit 0
