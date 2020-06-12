@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pwd
 sh ./stop.sh
 
@@ -46,6 +48,27 @@ else
     echo 'check git ################################## Yes'
 fi
 
+ls top-argus-agent
+if [ $? -eq 0 ]
+then
+    echo "found top-argus-agent dir"
+    if [ $# -ne 1]
+    then
+        echo "using non-force mode, will exit"
+        exit 0
+    fi
+
+    if [ $1 != '-f' ]
+    then
+        echo "param invalid:$1, will exit"
+        exit 0
+    fi
+
+    echo "using -f(force) mode, will reinstall top-argus-agent..."
+else
+    echo "not found top-argus-agent dir, will install top-argus-agent..."
+fi
+
 rm -rf top-argus-agent
 git clone https://github.com/smaugx/top-argus-agent
 echo 'clone top-argus-agent ################################## Ok'
@@ -60,3 +83,4 @@ pip install -r requirements.txt
 echo ""
 echo "###################everything ready for agent####################"
 echo "done deploy"
+echo ""
