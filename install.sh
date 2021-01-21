@@ -76,7 +76,7 @@ echo 'clone top-argus-agent ################################## Ok'
 cd top-argus-agent
 ret_vir=`which virtualenv`
 ret_py3=`which python3`
-$ret_vir -p $ret_py3 vvlinux
+$ret_vir -p $ret_py3 vvlinux  --reset-app-data
 source  vvlinux/bin/activate
 pip install -r requirements.txt
 
