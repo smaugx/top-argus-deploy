@@ -81,8 +81,7 @@ ret_py3=`which python3`
 #source  vvlinux/bin/activate
 #pip install -r requirements.txt
 
-$ret_py3 -m pip install -r requirements.txt
-
+$ret_py3 -m pip install  --upgrade --force-reinstall -r requirements.txt
 
 
 echo ""
